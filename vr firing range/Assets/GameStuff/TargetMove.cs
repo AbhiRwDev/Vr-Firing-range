@@ -16,6 +16,7 @@ public class TargetMove : MonoBehaviour
     public int isCorrect;//value of the target if 1= correct, 0 would mean not correct
     float localtimer;
     
+    
 
     // Update is called once per frame
     void Update()
@@ -116,6 +117,10 @@ public class TargetMove : MonoBehaviour
     {
         if(collision.collider.CompareTag("Bullet"))
         {
+            FindFirstObjectByType<TargetManager>().ShotIndicator.transform.parent = transform;
+
+
+            FindFirstObjectByType<TargetManager>().ShotIndicator.transform.position= new Vector3(transform.position.x, transform.position.y, transform.position.z+0.3f);
             TargetHit();
             
 

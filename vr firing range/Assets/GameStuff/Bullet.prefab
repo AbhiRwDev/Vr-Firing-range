@@ -49,7 +49,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3627437307267500107}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 3627437307267511270}
   - component: {fileID: 3627437307267511271}
   - component: {fileID: 4270884874807833435}
+  - component: {fileID: -918386563779680416}
   m_Layer: 6
   m_Name: Bullet
   m_TagString: Bullet
@@ -160,6 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24e5f3506e6cbeb4bbaae684396f6a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CollisionParticle: {fileID: 32016951716470653, guid: b9eb379435f55ca498cf496f1ff44b85, type: 3}
 --- !u!96 &4270884874807833435
 TrailRenderer:
   serializedVersion: 2
@@ -259,3 +261,15 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &-918386563779680416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3627437307267511193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10fc2d768d57bda4db3bdc8860cb2d09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
+    public GameObject CollisionParticle;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,8 @@ public class BulletScript : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        Instantiate(CollisionParticle, transform.position,Quaternion.identity);
         Destroy(gameObject);
+        
     }
 }

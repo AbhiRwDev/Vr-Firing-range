@@ -38,8 +38,9 @@ public class ShootableUi : MonoBehaviour
             }
             else if(type==Type.Level)
             {
-                if(!(tmg.Level<0)&&!(tmg.Level>4))
-                tmg.Level += Change;
+               tmg.Level += Change;
+               tmg.Level = Mathf.Clamp(tmg.Level, 0, 4);
+                
                 
             }else if(type==Type.infiniteMode)
             {

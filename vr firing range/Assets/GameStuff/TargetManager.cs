@@ -15,6 +15,7 @@ public class TargetManager : MonoBehaviour
     public GameObject settingBoard;
     public AudioSource ad;
     public AudioClip[] clips;
+    public GameObject ShotIndicator;
     // Start is called before the first frame update
     void Start()
     {
@@ -65,6 +66,8 @@ public class TargetManager : MonoBehaviour
     }
     public void SpawnTargets()
     {
+        ShotIndicator.transform.parent = this.transform;
+        ShotIndicator.transform.position = new Vector3(100,100,100);
         int im = 0;
         if (RoundCounter < MaxRounds)
         {
