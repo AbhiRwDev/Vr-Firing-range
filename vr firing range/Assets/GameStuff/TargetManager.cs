@@ -23,6 +23,8 @@ public class TargetManager : MonoBehaviour
     }
     public void StartSpawn()
     {
+        CorrectHits = 0;
+        WrongHits = 0;
         SpawnTargets();
     }
     // Update is called once per frame

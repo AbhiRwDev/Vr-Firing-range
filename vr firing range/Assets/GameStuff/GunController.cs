@@ -17,7 +17,7 @@ public class GunController : MonoBehaviour
     public OVRInput.Button shootButton;
     public float fireRate = 0.5f;  // Adjust the fire rate as desired
     private OVRGrabbable grabbable;
-  /*  private AudioSource audioS;*/
+    private AudioSource audioS;
     private bool isShooting = false;
     private float nextShotTime = 0f;
     public bool isAutomatic = false;
@@ -26,7 +26,7 @@ public class GunController : MonoBehaviour
     void Start()
     {
         grabbable = GetComponent<OVRGrabbable>();
-       /* audioS = GetComponent<AudioSource>();*/
+        audioS = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -49,7 +49,7 @@ public class GunController : MonoBehaviour
             if (isShooting && Time.time >= nextShotTime)
             {
                 ShootGun();
-                //audioS.Play();
+                audioS.Play();
                 nextShotTime = Time.time + 1f / fireRate;  // Calculate the next shot time based on fire rate
             }
         }
@@ -58,7 +58,7 @@ public class GunController : MonoBehaviour
             if (grabbable.isGrabbed && OVRInput.GetDown(shootButton, grabbable.grabbedBy.GetController()))
             {
                 ShootGun();
-                //audioS.Play();
+                audioS.Play();
             }
         }
 
