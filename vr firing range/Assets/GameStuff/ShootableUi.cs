@@ -12,7 +12,8 @@ public class ShootableUi : MonoBehaviour
         Sound1,
         Sound2,
         Sound3,
-        StartGame
+        StartGame,
+        EmojiType
     }
     public Type type;
     public int Change;
@@ -63,6 +64,10 @@ public class ShootableUi : MonoBehaviour
             }else if(type==Type.Sound1|| type == Type.Sound2 || type == Type.Sound3)
             {
                 tmg.PlaySound(Change);
+            }
+            else if(type==Type.EmojiType)
+            {
+                tmg.ChangeMat(Change);
             }
         }
     }

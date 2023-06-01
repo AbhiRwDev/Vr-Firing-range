@@ -16,6 +16,8 @@ public class TargetManager : MonoBehaviour
     public AudioSource ad;
     public AudioClip[] clips;
     public GameObject ShotIndicator;
+    public Material[] EmojiTypesWrong;
+    public Material[] emojitypesRight;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +33,20 @@ public class TargetManager : MonoBehaviour
     void Update()
     {
         
+    }
+    public void ChangeMat(int type)
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            if(i==0)
+            {
+                RightImage.GetComponent<MeshRenderer>().material = emojitypesRight[type];
+            }
+            else
+            {
+                WrongImage[i-1].GetComponent<MeshRenderer>().material = EmojiTypesWrong[type];
+            }
+        }
     }
      public void CheckHit(int HitValue)
     {
