@@ -4961,6 +4961,7 @@ GameObject:
   - component: {fileID: 145173488}
   - component: {fileID: 145173489}
   - component: {fileID: 145173490}
+  - component: {fileID: 145173491}
   m_Layer: 6
   m_Name: ReichsrevolverM1879
   m_TagString: Untagged
@@ -5326,6 +5327,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54d2a336f38a6b74b85a5479b7b0d8df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Muzzel: {fileID: 1729716444}
+  lineRenderer: {fileID: 145173491}
 --- !u!82 &145173490
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5422,6 +5425,105 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!120 &145173491
+LineRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145057668}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 0
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 1257c577da91ea6419662a8072478002, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Positions:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 34.99, z: 33.12}
+  m_Parameters:
+    serializedVersion: 3
+    widthMultiplier: 1
+    widthCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.011762679
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    colorGradient:
+      serializedVersion: 2
+      key0: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+    numCornerVertices: 0
+    numCapVertices: 0
+    alignment: 0
+    textureMode: 0
+    shadowBias: 0.5
+    generateLightingData: 0
+  m_UseWorldSpace: 1
+  m_Loop: 0
 --- !u!1001 &145838396
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9729,6 +9831,9 @@ MonoBehaviour:
   type: 5
   Change: 2
   tmg: {fileID: 0}
+  G: {fileID: 0}
+  Green: {fileID: 2100000, guid: 2fb97728a63517e48ad117982bd94602, type: 2}
+  Black: {fileID: 2100000, guid: 1fb32078cf009864a949863e6e678a82, type: 2}
 --- !u!65 &301169169
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12458,6 +12563,9 @@ MonoBehaviour:
   type: 6
   Change: -1
   tmg: {fileID: 0}
+  G: {fileID: 0}
+  Green: {fileID: 0}
+  Black: {fileID: 0}
 --- !u!65 &431722391
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13193,6 +13301,9 @@ MonoBehaviour:
   type: 1
   Change: -1
   tmg: {fileID: 0}
+  G: {fileID: 0}
+  Green: {fileID: 0}
+  Black: {fileID: 0}
 --- !u!65 &484899236
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13485,6 +13596,9 @@ MonoBehaviour:
   type: 2
   Change: -1
   tmg: {fileID: 0}
+  G: {fileID: 0}
+  Green: {fileID: 0}
+  Black: {fileID: 0}
 --- !u!65 &497382428
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17675,6 +17789,9 @@ MonoBehaviour:
   type: 7
   Change: 1
   tmg: {fileID: 0}
+  G: {fileID: 0}
+  Green: {fileID: 2100000, guid: 2fb97728a63517e48ad117982bd94602, type: 2}
+  Black: {fileID: 2100000, guid: 1fb32078cf009864a949863e6e678a82, type: 2}
 --- !u!65 &700666870
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19141,6 +19258,9 @@ MonoBehaviour:
   type: 7
   Change: 0
   tmg: {fileID: 0}
+  G: {fileID: 0}
+  Green: {fileID: 2100000, guid: 2fb97728a63517e48ad117982bd94602, type: 2}
+  Black: {fileID: 2100000, guid: 1fb32078cf009864a949863e6e678a82, type: 2}
 --- !u!65 &746114636
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21247,6 +21367,9 @@ MonoBehaviour:
   type: 1
   Change: 1
   tmg: {fileID: 0}
+  G: {fileID: 0}
+  Green: {fileID: 0}
+  Black: {fileID: 0}
 --- !u!65 &862719033
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21614,6 +21737,7 @@ GameObject:
   - component: {fileID: 866316341}
   - component: {fileID: 866316340}
   - component: {fileID: 866316339}
+  - component: {fileID: 866316347}
   m_Layer: 6
   m_Name: ReichsrevolverM1879 (1)
   m_TagString: Untagged
@@ -21729,6 +21853,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54d2a336f38a6b74b85a5479b7b0d8df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Muzzel: {fileID: 432743646}
+  lineRenderer: {fileID: 866316347}
 --- !u!114 &866316341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21840,6 +21966,105 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!120 &866316347
+LineRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866316338}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 0
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 1257c577da91ea6419662a8072478002, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Positions:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 34.99, z: 33.12}
+  m_Parameters:
+    serializedVersion: 3
+    widthMultiplier: 1
+    widthCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.011762679
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    colorGradient:
+      serializedVersion: 2
+      key0: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+    numCornerVertices: 0
+    numCapVertices: 0
+    alignment: 0
+    textureMode: 0
+    shadowBias: 0.5
+    generateLightingData: 0
+  m_UseWorldSpace: 1
+  m_Loop: 0
 --- !u!1 &873877650
 GameObject:
   m_ObjectHideFlags: 0
@@ -22341,6 +22566,9 @@ MonoBehaviour:
   type: 3
   Change: 0
   tmg: {fileID: 0}
+  G: {fileID: 0}
+  Green: {fileID: 2100000, guid: 2fb97728a63517e48ad117982bd94602, type: 2}
+  Black: {fileID: 2100000, guid: 1fb32078cf009864a949863e6e678a82, type: 2}
 --- !u!65 &896723869
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22370,6 +22598,7 @@ GameObject:
   - component: {fileID: 905717244}
   - component: {fileID: 905717243}
   - component: {fileID: 905717242}
+  - component: {fileID: 905717250}
   m_Layer: 6
   m_Name: ReichsrevolverM1879 (2)
   m_TagString: Untagged
@@ -22485,6 +22714,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54d2a336f38a6b74b85a5479b7b0d8df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Muzzel: {fileID: 388103933}
+  lineRenderer: {fileID: 905717250}
 --- !u!114 &905717244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22596,6 +22827,105 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!120 &905717250
+LineRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905717241}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 0
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 1257c577da91ea6419662a8072478002, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Positions:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 34.99, z: 33.12}
+  m_Parameters:
+    serializedVersion: 3
+    widthMultiplier: 1
+    widthCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.011762679
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    colorGradient:
+      serializedVersion: 2
+      key0: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+    numCornerVertices: 0
+    numCapVertices: 0
+    alignment: 0
+    textureMode: 0
+    shadowBias: 0.5
+    generateLightingData: 0
+  m_UseWorldSpace: 1
+  m_Loop: 0
 --- !u!1001 &910427869
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23356,7 +23686,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!136 &962857992
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -28905,6 +29235,9 @@ MonoBehaviour:
   type: 0
   Change: 1
   tmg: {fileID: 0}
+  G: {fileID: 0}
+  Green: {fileID: 0}
+  Black: {fileID: 0}
 --- !u!4 &1270805054 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2807449429036539767, guid: f0c16f0ea935ea64297ca1d4d55d9746, type: 3}
@@ -29963,6 +30296,9 @@ MonoBehaviour:
   type: 0
   Change: -1
   tmg: {fileID: 0}
+  G: {fileID: 0}
+  Green: {fileID: 0}
+  Black: {fileID: 0}
 --- !u!1001 &1305680009
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30892,6 +31228,9 @@ MonoBehaviour:
   type: 7
   Change: 2
   tmg: {fileID: 0}
+  G: {fileID: 0}
+  Green: {fileID: 2100000, guid: 2fb97728a63517e48ad117982bd94602, type: 2}
+  Black: {fileID: 2100000, guid: 1fb32078cf009864a949863e6e678a82, type: 2}
 --- !u!65 &1337441651
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40081,6 +40420,9 @@ MonoBehaviour:
   type: 4
   Change: 1
   tmg: {fileID: 0}
+  G: {fileID: 0}
+  Green: {fileID: 2100000, guid: 2fb97728a63517e48ad117982bd94602, type: 2}
+  Black: {fileID: 2100000, guid: 1fb32078cf009864a949863e6e678a82, type: 2}
 --- !u!65 &1800524158
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44639,6 +44981,8 @@ MonoBehaviour:
   - {fileID: 2100000, guid: d60927fcb2cdc544f8d26a7085a7004b, type: 2}
   - {fileID: 2100000, guid: 8631013eba834ad4aac90edab1afce0c, type: 2}
   - {fileID: 2100000, guid: 73fff0762bfa5cc47a42a7febbdef22f, type: 2}
+  EmojiType: 0
+  Soundtype: 0
 --- !u!82 &2035984632
 AudioSource:
   m_ObjectHideFlags: 0

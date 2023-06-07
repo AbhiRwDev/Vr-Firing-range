@@ -18,16 +18,43 @@ public class ShootableUi : MonoBehaviour
     public Type type;
     public int Change;
     public TargetManager tmg;
+    public GameObject G;
+    public Material Green, Black;
     // Start is called before the first frame update
     void Start()
     {
         tmg = FindFirstObjectByType<TargetManager>();
+        G = transform.GetChild(0).gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (type == Type.Sound1 || type == Type.Sound2 || type == Type.Sound3)
+        {
+           // tmg.PlaySound(Change);
+            if (Change == tmg.Soundtype)
+            {
+                G.GetComponent<Renderer>().material = Green;
+            }
+            else
+            {
+                G.GetComponent<Renderer>().material = Black;
+            }
+        }
+        if (type == Type.EmojiType)
+        {
+            //tmg.ChangeMat(Change);
+            if (Change == tmg.EmojiType)
+            {
+                G.GetComponent<Renderer>().material = Green;
+            }
+            else
+            {
+                G.GetComponent<Renderer>().material = Black;
+            }
+        }
+
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -64,11 +91,28 @@ public class ShootableUi : MonoBehaviour
             }else if(type==Type.Sound1|| type == Type.Sound2 || type == Type.Sound3)
             {
                 tmg.PlaySound(Change);
+                if (Change == tmg.Soundtype)
+                {
+                    G.GetComponent<Renderer>().material = Green;
+                }
+                else
+                {
+                    G.GetComponent<Renderer>().material = Black;
+                }
             }
             else if(type==Type.EmojiType)
             {
                 tmg.ChangeMat(Change);
+                if(Change==tmg.EmojiType)
+                {
+                    G.GetComponent<Renderer>().material = Green;
+                }
+                else
+                {
+                    G.GetComponent<Renderer>().material = Black;
+                }
             }
         }
+        
     }
 }

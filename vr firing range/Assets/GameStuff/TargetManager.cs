@@ -18,10 +18,12 @@ public class TargetManager : MonoBehaviour
     public GameObject ShotIndicator;
     public Material[] EmojiTypesWrong;
     public Material[] emojitypesRight;
+
+    public int EmojiType, Soundtype;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Soundtype = -1;
     }
     public void StartSpawn()
     {
@@ -47,6 +49,7 @@ public class TargetManager : MonoBehaviour
                 WrongImage[i-1].GetComponent<MeshRenderer>().material = EmojiTypesWrong[type];
             }
         }
+        EmojiType = type;
     }
      public void CheckHit(int HitValue)
     {
@@ -279,5 +282,6 @@ public class TargetManager : MonoBehaviour
     {
         ad.clip = clips[soundClip];
         ad.Play();
+        Soundtype = soundClip;
     }
 }
