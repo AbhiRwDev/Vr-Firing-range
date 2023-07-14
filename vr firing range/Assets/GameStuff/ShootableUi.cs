@@ -86,7 +86,9 @@ public class ShootableUi : MonoBehaviour
                 
             }else if(type==Type.StartGame)
             {
+                tmg.Level = 0;
                 tmg.StartSpawn();
+                
                 gameObject.transform.parent.gameObject.SetActive(false);
             }else if(type==Type.Sound1|| type == Type.Sound2 || type == Type.Sound3)
             {

@@ -20,6 +20,10 @@ public class TargetManager : MonoBehaviour
     public Material[] emojitypesRight;
 
     public int EmojiType, Soundtype;
+
+
+
+    private int tempHitCounter;
     // Start is called before the first frame update
     void Start()
     {
@@ -58,11 +62,18 @@ public class TargetManager : MonoBehaviour
         {
             Debug.Log("correct hit");
             CorrectHits += 1;
+            tempHitCounter += 1;
         }
         else
         {
             Debug.Log("Wrong hit");
             WrongHits += 1;
+        }
+       
+        if(tempHitCounter>=3)
+        {
+            Level += 1;
+            tempHitCounter = 0;
         }
        
         Invoke(nameof(ResetTargets),3f);
@@ -90,19 +101,19 @@ public class TargetManager : MonoBehaviour
         ShotIndicator.transform.parent = this.transform;
         ShotIndicator.transform.position = new Vector3(100,100,100);
         int im = 0;
-        if (RoundCounter < MaxRounds)
+        if (Level <= 4)
         {
             int i = 0;
-            
-            int r = Random.Range(0, targets.Length-1);
+
+            int r = Random.Range(0, targets.Length - 1);
             switch (Level)
             {
                 case 0://only pop up and go down when shot
 
                     foreach (var item in targets)
                     {
-                        
-                        
+
+
                         item.SetActive(true);
                         item.GetComponent<TargetMove>().popUpTimer = 3;
                         item.GetComponent<TargetMove>().bshouldGoDown = false;
@@ -112,7 +123,7 @@ public class TargetManager : MonoBehaviour
                         item.GetComponent<TargetMove>().speed = Random.Range(3, 8);
                         item.GetComponent<TargetMove>().goDownTimer = 5;
                         item.GetComponent<Collider>().enabled = true;
-                        
+
                         if (i == r)
                         {
                             item.GetComponent<TargetMove>().isCorrect = 1;
@@ -122,7 +133,7 @@ public class TargetManager : MonoBehaviour
                         }
                         else
                         {
-                           
+
                             item.GetComponent<TargetMove>().isCorrect = 0;
                             WrongImage[im].transform.parent = item.transform;
                             WrongImage[im].transform.position = item.transform.position;
@@ -138,7 +149,7 @@ public class TargetManager : MonoBehaviour
                     r = Random.Range(0, targets.Length);
                     foreach (var item in targets)
                     {
-                        
+
                         item.SetActive(true);
                         item.GetComponent<TargetMove>().popUpTimer = 3;
                         item.GetComponent<TargetMove>().bshouldGoDown = true;
@@ -171,7 +182,7 @@ public class TargetManager : MonoBehaviour
                     r = Random.Range(0, targets.Length);
                     foreach (var item in targets)
                     {
-                       
+
                         item.SetActive(true);
                         item.GetComponent<TargetMove>().popUpTimer = 3;
                         item.GetComponent<TargetMove>().bshouldGoDown = false;
@@ -185,7 +196,7 @@ public class TargetManager : MonoBehaviour
                         {
                             item.GetComponent<TargetMove>().isCorrect = 1;
                             RightImage.transform.parent = item.transform;
-                           
+
                             RightImage.transform.position = item.transform.position;
                             RightImage.transform.localPosition = new Vector3(RightImage.transform.localPosition.x, 1.05f, RightImage.transform.localPosition.z);
                         }
@@ -205,7 +216,7 @@ public class TargetManager : MonoBehaviour
                     r = Random.Range(0, targets.Length);
                     foreach (var item in targets)
                     {
-                        
+
                         item.SetActive(true);
                         item.GetComponent<TargetMove>().popUpTimer = 3;
                         item.GetComponent<TargetMove>().bshouldGoDown = true;
@@ -238,7 +249,7 @@ public class TargetManager : MonoBehaviour
                     r = Random.Range(0, targets.Length);
                     foreach (var item in targets)
                     {
-                       
+
                         item.SetActive(true);
                         item.GetComponent<TargetMove>().popUpTimer = 3;
                         item.GetComponent<TargetMove>().bshouldGoDown = true;
@@ -269,13 +280,15 @@ public class TargetManager : MonoBehaviour
 
 
             }
-            RoundCounter++;
+
         }
         else
         {
             settingBoard.SetActive(true);
-            RoundCounter = 0;
+            
         }
+        
+        
         
     }
     public void PlaySound(int soundClip)
