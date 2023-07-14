@@ -98,6 +98,8 @@ public class TargetManager : MonoBehaviour
     }
     public void SpawnTargets()
     {
+       
+        ChangeMat(Random.Range(0, 3));
         ShotIndicator.transform.parent = this.transform;
         ShotIndicator.transform.position = new Vector3(100,100,100);
         int im = 0;
