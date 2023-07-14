@@ -13,13 +13,15 @@ public class ShootableUi : MonoBehaviour
         Sound2,
         Sound3,
         StartGame,
-        EmojiType
+        EmojiType,
+     
     }
     public Type type;
     public int Change;
     public TargetManager tmg;
     public GameObject G;
     public Material Green, Black;
+    public MissedBullets missedbulletscheck;
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +56,7 @@ public class ShootableUi : MonoBehaviour
                 G.GetComponent<Renderer>().material = Black;
             }
         }
+       
 
     }
     private void OnCollisionEnter(Collision collision)
@@ -88,7 +91,11 @@ public class ShootableUi : MonoBehaviour
             {
                 tmg.Level = 0;
                 tmg.StartSpawn();
-                
+                if(missedbulletscheck!=null)
+                {
+                    missedbulletscheck.Misses = 0;
+                }
+               
                 gameObject.transform.parent.gameObject.SetActive(false);
             }else if(type==Type.Sound1|| type == Type.Sound2 || type == Type.Sound3)
             {

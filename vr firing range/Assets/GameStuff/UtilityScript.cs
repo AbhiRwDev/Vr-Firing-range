@@ -10,11 +10,13 @@ public class UtilityScript : MonoBehaviour
         CorrectHitsCounter,
         Roundcounter,
         MaxRoundCounter,
-        LevelCounter
+        LevelCounter,
+        MissesCounter
     }
     public Type type;
     public TargetManager targetmanager;
     public TextMeshPro textcomponent;
+    public MissedBullets missedbulletscheck;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +44,13 @@ public class UtilityScript : MonoBehaviour
         }else if(type==Type.LevelCounter)
         {
             textcomponent.text = (targetmanager.Level + 1).ToString();
+        }else if(type==Type.MissesCounter)
+        {
+            if(missedbulletscheck!=null)
+            {
+                textcomponent.text = missedbulletscheck.Misses.ToString();
+            }
+            
         }
     }
 }

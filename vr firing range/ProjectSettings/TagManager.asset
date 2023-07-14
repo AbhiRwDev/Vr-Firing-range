@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bullet
   - PlaceHolderTarget
+  - MissedWall
   layers:
   - Default
   - TransparentFX
