@@ -17,9 +17,9 @@ public class BaloonController : MonoBehaviour
     public GameObject SettingBoard,ScoreBoard;
     public GameObject LevelText;
     private UtilityScript Us;
-
-
-
+    public AudioClip[] audioclips;
+    public int sclip;
+    public Material Unmat, yesMat;
     
     // Start is called before the first frame update
     void Start()
@@ -175,6 +175,7 @@ public class BaloonController : MonoBehaviour
     }
     public void GameOver()
     {
+        audiosrc.Stop();
         SettingBoard.SetActive(true);
         ScoreBoard.SetActive(true);
         foreach (var item in Baloons)
@@ -182,5 +183,23 @@ public class BaloonController : MonoBehaviour
             item.SetActive(false);
         }
         Debug.Log("GameOver");
+    }
+
+    public void PlaySound(int audioclip)
+    {
+        
+        sclip = audioclip;
+        if (sclip < 3)
+        {
+            audiosrc.clip = audioclips[sclip];
+            audiosrc.Play();
+        }
+        if(sclip==3)
+        {
+            audiosrc.Stop();
+        }
+        
+
+       
     }
 }
