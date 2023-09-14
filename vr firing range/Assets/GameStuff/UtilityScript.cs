@@ -4,44 +4,29 @@ using UnityEngine;
 using TMPro;
 public class UtilityScript : MonoBehaviour
 {
-    public enum Type
+    public string Alltexts;
+    public int[] WHs, CHs = new int[5];
+
+    public TextMeshPro[] WHstexts, CHstexts = new TextMeshPro[5];
+    private void Update()
     {
-        WrongHitsCounter,
-        CorrectHitsCounter,
-        Roundcounter,
-        MaxRoundCounter,
-        LevelCounter
+        UpdateTexts();
     }
-    public Type type;
-    public TargetManager targetmanager;
-    public TextMeshPro textcomponent;
-    // Start is called before the first frame update
-    void Start()
+    public void UpdateTexts()
     {
-        targetmanager = FindFirstObjectByType<TargetManager>();
+        for (int i = 0; i < WHs.Length; i++)
+        {
+            WHstexts[i].text = WHs[i].ToString();
+            CHstexts[i].text = CHs[i].ToString();
+        }
+    }
+    public void ResetScores()
+    {
+        for (int i = 0; i < WHs.Length; i++)
+        {
+            WHs[i] = 0;
+            CHs[i] = 0;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(type==Type.WrongHitsCounter)
-        {
-            textcomponent.text = targetmanager.WrongHits.ToString();
-        }
-        else if (type == Type.CorrectHitsCounter)
-        {
-            textcomponent.text = targetmanager.CorrectHits.ToString();
-        }
-        else if (type == Type.Roundcounter)
-        {
-            textcomponent.text = targetmanager.RoundCounter.ToString();
-        }
-        else if (type == Type.MaxRoundCounter)
-        {
-            textcomponent.text = targetmanager.MaxRounds.ToString();
-        }else if(type==Type.LevelCounter)
-        {
-            textcomponent.text = (targetmanager.Level + 1).ToString();
-        }
-    }
 }

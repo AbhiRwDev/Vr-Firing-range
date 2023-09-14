@@ -70,10 +70,10 @@ public class GunController : MonoBehaviour
     {
         // Add your gun shooting logic here
         Debug.Log("Gun fired!");
-      
-           
-         
-            GameObject b = Instantiate(Bullet, ShootPoint.position, ShootPoint.rotation);
+        
+
+
+        GameObject b = Instantiate(Bullet, ShootPoint.position, ShootPoint.rotation);
         b.GetComponent<BulletScript>().BulletForce(speed);
         GetComponent<RevolverController>().HammerStrike();
         MuzzelFlash.SetActive(true);
