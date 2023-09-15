@@ -58,20 +58,53 @@ public class BaloonController : MonoBehaviour
     }
     public void GenerateCombination()
     {
-        if(Level==1)
+        switch (Level)
         {
-            Combination = Random.Range(100,1000);
-        }else if(Level==2)
-        {
-            Combination = Random.Range(100, 1000);
-        }else if(Level==3)
-        {
-            Combination = Random.Range(1000, 10000);
+            case 1:
+                Combination = Random.Range(100, 1000);
+                foreach (var item in Baloons)
+                {
+                    item.GetComponent<Balloon>().Ismovingup = false;
+                    item.GetComponent<Balloon>().movespeed = 0;
+                    item.GetComponent<MeshRenderer>().material.color = Color.red;
+                }
+                break;
+            case 2:
+
+                Combination = Random.Range(100, 1000);
+                foreach (var item in Baloons)
+                {
+                  
+                    item.GetComponent<Balloon>().movespeed = 2;
+                }
+                break;
+            case 3:
+                foreach (var item in Baloons)
+                {
+                    item.GetComponent<MeshRenderer>().material.color = Random.ColorHSV();
+                    item.GetComponent<Balloon>().movespeed = 2;
+                }
+                Combination = Random.Range(1000, 10000);
+                break;
+            case 4:
+                foreach (var item in Baloons)
+                {
+                    item.GetComponent<MeshRenderer>().material.color = Random.ColorHSV();
+                    item.GetComponent<Balloon>().movespeed = 4;
+                }
+                Combination = Random.Range(10000, 100000);
+                break;
+            case 5:
+                foreach (var item in Baloons)
+                {
+                    item.GetComponent<MeshRenderer>().material.color = Random.ColorHSV();
+                    item.GetComponent<Balloon>().movespeed = 6;
+                    
+                }
+                Combination = Random.Range(100000, 1000000);
+                break;
         }
-        else if(Level == 4 || Level == 5)
-        {
-            Combination = Random.Range(10000, 100000);
-        }
+        
 
        
         RandomizeBaloons();
