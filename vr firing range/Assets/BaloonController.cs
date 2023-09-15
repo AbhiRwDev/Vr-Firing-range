@@ -20,7 +20,7 @@ public class BaloonController : MonoBehaviour
     public AudioClip[] audioclips;
     public int sclip;
     public Material Unmat, yesMat;
-    
+    public TextMeshPro levelround;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +33,14 @@ public class BaloonController : MonoBehaviour
     {
         CombinationText.text = Combination.ToString();
         CombinationText1.text = CombinationEntered;
+        if(Level<6)
+        {
+            levelround.text = "L-" + Level.ToString() + "\n" + "R-" + round.ToString();
+        }
+        else
+        {
+            levelround.text = "";
+        }
     }
     public void StartPlayThrough()
     {
@@ -199,7 +207,5 @@ public class BaloonController : MonoBehaviour
             audiosrc.Stop();
         }
         
-
-       
     }
 }
