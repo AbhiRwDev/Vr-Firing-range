@@ -48,6 +48,7 @@ public class Balloon : MonoBehaviour
         if(collision.collider.CompareTag("Bullet"))
         {
             Bcontroller.EnterCombination(number);
+            Bcontroller.PlayBalloonPop();
         }
     }
 }

@@ -8,7 +8,7 @@ public class BaloonController : MonoBehaviour
     public string CombinationEntered;
     public int Level;
     public int round=0;
-    public AudioSource audiosrc;
+    public AudioSource audiosrc,audiosrc1;
     public GameObject[] Baloons;
     public int IncorrectHits;
 
@@ -133,7 +133,10 @@ public class BaloonController : MonoBehaviour
         }
         tempstore.Clear();
     }
-
+    public void PlayBalloonPop()
+    {
+        audiosrc1.Play();
+    }
     public void EnterCombination(int N)
     {
         string s = CombinationEntered + N.ToString();
