@@ -48,7 +48,7 @@ public class BaloonController : MonoBehaviour
         round = 0;
         IncorrectHits = 0;
         Us.ResetScores();
-        ScoreBoard.SetActive(false);
+       // ScoreBoard.SetActive(false);
         StartGame();
     }
     public void StartGame()
