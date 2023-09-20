@@ -232,6 +232,7 @@ Transform:
   - {fileID: 1319630658}
   - {fileID: 1332120678}
   - {fileID: 1340317886}
+  - {fileID: 1542933590}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11551,7 +11552,7 @@ GameObject:
   - component: {fileID: 365071591}
   m_Layer: 0
   m_Name: Baloon (8)
-  m_TagString: Untagged
+  m_TagString: Balloons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11668,7 +11669,7 @@ GameObject:
   - component: {fileID: 368875803}
   m_Layer: 0
   m_Name: Baloon (2)
-  m_TagString: Untagged
+  m_TagString: Balloons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15571,7 +15572,7 @@ GameObject:
   - component: {fileID: 572162092}
   m_Layer: 0
   m_Name: Baloon (7)
-  m_TagString: Untagged
+  m_TagString: Balloons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23728,7 +23729,7 @@ GameObject:
   - component: {fileID: 907046944}
   m_Layer: 0
   m_Name: Baloon (9)
-  m_TagString: Untagged
+  m_TagString: Balloons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24373,7 +24374,7 @@ GameObject:
   - component: {fileID: 946534222}
   m_Layer: 0
   m_Name: Baloon (1)
-  m_TagString: Untagged
+  m_TagString: Balloons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27937,7 +27938,7 @@ GameObject:
   - component: {fileID: 1112207651}
   m_Layer: 0
   m_Name: Baloon (3)
-  m_TagString: Untagged
+  m_TagString: Balloons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35324,7 +35325,7 @@ GameObject:
   - component: {fileID: 1525527823}
   m_Layer: 0
   m_Name: Baloon (4)
-  m_TagString: Untagged
+  m_TagString: Balloons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35821,6 +35822,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4931211907768612, guid: e88b7bb02ae149940a5a0cddf34fe370, type: 3}
   m_PrefabInstance: {fileID: 1541683465}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1542933589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1542933590}
+  - component: {fileID: 1542933591}
+  m_Layer: 0
+  m_Name: Cube (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1542933590
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542933589}
+  m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
+  m_LocalPosition: {x: 56.5, y: 15.26, z: 0}
+  m_LocalScale: {x: 1099, y: 1629.8, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5143142}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
+--- !u!65 &1542933591
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542933589}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1543981031
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39597,7 +39643,7 @@ GameObject:
   - component: {fileID: 1714325129}
   m_Layer: 0
   m_Name: Baloon (6)
-  m_TagString: Untagged
+  m_TagString: Balloons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46397,7 +46443,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.749
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -46493,7 +46539,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 747528ecd5363734d8d529affae29a6e, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.945
+  m_Volume: 0.865
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -46658,7 +46704,7 @@ GameObject:
   - component: {fileID: 2072344414}
   m_Layer: 0
   m_Name: Baloon (5)
-  m_TagString: Untagged
+  m_TagString: Balloons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65273,7 +65319,7 @@ GameObject:
   - component: {fileID: 7506580495218491151}
   m_Layer: 0
   m_Name: Baloon
-  m_TagString: Untagged
+  m_TagString: Balloons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

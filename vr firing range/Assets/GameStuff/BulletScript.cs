@@ -18,6 +18,10 @@ public class BulletScript : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        if(!collision.collider.CompareTag("Balloons"))
+        {
+            FindObjectOfType<BaloonController>().IncorrectHits++;
+        }
         Instantiate(CollisionParticle, transform.position,Quaternion.identity);
         Destroy(gameObject);
         
