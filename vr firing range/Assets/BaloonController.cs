@@ -31,6 +31,7 @@ public class BaloonController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(Mathf.Sin(Time.time));
         CombinationText.text = Combination.ToString();
         CombinationText1.text = CombinationEntered;
         if(Level<6)
@@ -67,6 +68,8 @@ public class BaloonController : MonoBehaviour
                     item.GetComponent<Balloon>().Ismovingup = false;
                     item.GetComponent<Balloon>().movespeed = 0;
                     item.GetComponent<MeshRenderer>().material.color = Color.red;
+                    item.GetComponent<Balloon>().SetupSpeeds();
+                    
                 }
                 break;
             case 2:
@@ -83,6 +86,7 @@ public class BaloonController : MonoBehaviour
                 {
                     item.GetComponent<MeshRenderer>().material.color = Random.ColorHSV();
                     item.GetComponent<Balloon>().movespeed = 2;
+                    item.GetComponent<Balloon>().SetupSpeeds();
                 }
                 Combination = Random.Range(1000, 10000);
                 break;
@@ -90,7 +94,9 @@ public class BaloonController : MonoBehaviour
                 foreach (var item in Baloons)
                 {
                     item.GetComponent<MeshRenderer>().material.color = Random.ColorHSV();
-                    item.GetComponent<Balloon>().movespeed = 4;
+                    item.GetComponent<Balloon>().movespeed = 2;
+                    item.GetComponent<Balloon>().ShouldMoveUp = 1;
+                    item.GetComponent<Balloon>().SetupSpeeds();
                 }
                 Combination = Random.Range(10000, 100000);
                 break;
@@ -98,8 +104,10 @@ public class BaloonController : MonoBehaviour
                 foreach (var item in Baloons)
                 {
                     item.GetComponent<MeshRenderer>().material.color = Random.ColorHSV();
-                    item.GetComponent<Balloon>().movespeed = 6;
-                    
+                    item.GetComponent<Balloon>().movespeed = 2;
+                    item.GetComponent<Balloon>().ShouldMoveUp = 1;
+                    item.GetComponent<Balloon>().SetupSpeeds();
+
                 }
                 Combination = Random.Range(100000, 1000000);
                 break;
@@ -167,7 +175,10 @@ public class BaloonController : MonoBehaviour
             WinRound();
         }
     }
-
+    public void WrongHitIncrease()
+    {
+        Us.WHs[Level - 1] += 1;
+    }
     public void WinRound()
     {
         Us.UpdateTexts();

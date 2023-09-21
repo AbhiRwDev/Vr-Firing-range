@@ -11601,9 +11601,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 0
   Ntext: {fileID: 1778772502}
-  moveDistance: 4
+  moveDistance: 2
   movespeed: 0
   Ismovingup: 1
+  UpdownSpeed: 0
+  ShouldMoveUp: 0
 --- !u!23 &365071593
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11718,9 +11720,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 0
   Ntext: {fileID: 579732890}
-  moveDistance: 4
+  moveDistance: 2
   movespeed: 0
   Ismovingup: 1
+  UpdownSpeed: 0
+  ShouldMoveUp: 0
 --- !u!23 &368875805
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15621,9 +15625,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 0
   Ntext: {fileID: 390038101}
-  moveDistance: 4
+  moveDistance: 2
   movespeed: 0
   Ismovingup: 1
+  UpdownSpeed: 0
+  ShouldMoveUp: 0
 --- !u!23 &572162094
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23778,9 +23784,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 0
   Ntext: {fileID: 648321919}
-  moveDistance: 4
+  moveDistance: 2
   movespeed: 0
   Ismovingup: 1
+  UpdownSpeed: 0
+  ShouldMoveUp: 0
 --- !u!23 &907046946
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24423,9 +24431,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 0
   Ntext: {fileID: 758962229}
-  moveDistance: 4
+  moveDistance: 2
   movespeed: 0
   Ismovingup: 1
+  UpdownSpeed: 0
+  ShouldMoveUp: 0
 --- !u!23 &946534224
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27987,9 +27997,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 0
   Ntext: {fileID: 304434096}
-  moveDistance: 4
+  moveDistance: 2
   movespeed: 0
   Ismovingup: 1
+  UpdownSpeed: 0
+  ShouldMoveUp: 0
 --- !u!23 &1112207653
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -35374,9 +35386,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 0
   Ntext: {fileID: 1214580794}
-  moveDistance: 4
+  moveDistance: 2
   movespeed: 0
   Ismovingup: 1
+  UpdownSpeed: 0
+  ShouldMoveUp: 0
 --- !u!23 &1525527825
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -39692,9 +39706,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 0
   Ntext: {fileID: 1737136953}
-  moveDistance: 4
+  moveDistance: 2
   movespeed: 0
   Ismovingup: 1
+  UpdownSpeed: 0
+  ShouldMoveUp: 0
 --- !u!23 &1714325131
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -46753,9 +46769,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 0
   Ntext: {fileID: 224963853}
-  moveDistance: 4
+  moveDistance: 2
   movespeed: 0
   Ismovingup: 1
+  UpdownSpeed: 0
+  ShouldMoveUp: 0
 --- !u!23 &2072344416
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -71128,9 +71146,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 0
   Ntext: {fileID: 2043998883}
-  moveDistance: 4
+  moveDistance: 2
   movespeed: 0
   Ismovingup: 1
+  UpdownSpeed: 0
+  ShouldMoveUp: 0
 --- !u!64 &7506580495218491151
 MeshCollider:
   m_ObjectHideFlags: 0

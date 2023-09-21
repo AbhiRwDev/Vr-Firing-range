@@ -9,30 +9,47 @@ public class Balloon : MonoBehaviour
     private BaloonController Bcontroller;
 
     public float moveDistance = 0.5f;  // The distance to move left and right
-    private float startpos = 1.0f;    // The speed of the movement
+    private float startpos =4000;    // The speed of the movement
     private float endpos = 1.0f;    // The speed of the movement
     
     public float movespeed;
     public bool Ismovingup = false;
+    public float UpdownSpeed;
+    public int ShouldMoveUp=0;
     // Start is called before the first frame update
     void Start()
     {
-        startpos = transform.position.x-moveDistance;
-        endpos = transform.position.x+ moveDistance;
+        startpos = transform.localPosition.x;
+       
+        
+        
         Bcontroller = FindAnyObjectByType<BaloonController>();
     }
-
+    private void OnEnable()
+    {
+        SetupSpeeds();
+    }
+    public void SetupSpeeds()
+    {
+        if (startpos == 4000)
+        {
+            startpos = transform.localPosition.x;
+        }
+        transform.localPosition = new Vector3(startpos - movespeed / 2, transform.localPosition.y + Random.Range(-0.5f, 1.5f), transform.localPosition.z);
+        UpdownSpeed = Random.Range(0.3f, 1);
+    }
     // Update is called once per frame
     void Update()
     {
+        
         Ntext.text = number.ToString();   
        
         MoveLeftAndRight();
-      
+        
     }
    
     void MoveLeftAndRight()
-    {
+    {/*
         if(transform.position.x<=startpos)
         {
             movespeed = -movespeed;
@@ -40,7 +57,9 @@ public class Balloon : MonoBehaviour
         {
             movespeed *= -1;
         }
-        transform.localPosition += Vector3.right * movespeed * Time.deltaTime;
+*/
+       // transform.localPosition += Vector3.right * movespeed * Time.deltaTime;
+        transform.localPosition = new Vector3(transform.localPosition.x + (Mathf.Sin(Time.time) * movespeed * Time.deltaTime), transform.localPosition.y + (Mathf.Sin(Time.time)*UpdownSpeed*Time.deltaTime*ShouldMoveUp), transform.localPosition.z);
     }
    
     private void OnCollisionEnter(Collision collision)
