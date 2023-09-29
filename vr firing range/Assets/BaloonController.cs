@@ -21,6 +21,7 @@ public class BaloonController : MonoBehaviour
     public int sclip;
     public Material Unmat, yesMat;
     public TextMeshPro levelround;
+    public GameObject LevelSelector;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +32,7 @@ public class BaloonController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Mathf.Sin(Time.time));
+        //Debug.Log(Mathf.Sin(Time.time));
         CombinationText.text = Combination.ToString();
         CombinationText1.text = CombinationEntered;
         if(Level<6)
@@ -45,11 +46,11 @@ public class BaloonController : MonoBehaviour
     }
     public void StartPlayThrough()
     {
-        Level = 1;
+       
         round = 0;
         IncorrectHits = 0;
         Us.ResetScores();
-       // ScoreBoard.SetActive(false);
+        // ScoreBoard.SetActive(false);
         StartGame();
     }
     public void StartGame()
@@ -230,9 +231,11 @@ public class BaloonController : MonoBehaviour
     }
     public void GameOver()
     {
+        Level = 1;
         audiosrc.Stop();
         SettingBoard.SetActive(true);
         ScoreBoard.SetActive(true);
+        LevelSelector.SetActive(true);
         foreach (var item in Baloons)
         {
             item.SetActive(false);

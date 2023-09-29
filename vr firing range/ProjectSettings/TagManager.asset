@@ -8,6 +8,8 @@ TagManager:
   - PlaceHolderTarget
   - MissedWall
   - Balloons
+  - Rhand
+  - Lhand
   layers:
   - Default
   - TransparentFX

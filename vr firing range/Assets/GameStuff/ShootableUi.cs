@@ -10,11 +10,14 @@ public class ShootableUi : MonoBehaviour
         sound1,
         sound2,
         sound3,
-        Mute
+        Mute,
+        Levelinc,
+        Leveldec
     }
     public ButtonType buttontype;
     public BaloonController bc;
     public MeshRenderer mrendered;
+    public GameObject Levelselector;
     private void Start()
     {
         bc = FindAnyObjectByType<BaloonController>();
@@ -78,6 +81,7 @@ public class ShootableUi : MonoBehaviour
                 case ButtonType.Startbutton:
                     FindObjectOfType<BaloonController>().StartPlayThrough();
                     transform.parent.gameObject.SetActive(false);
+                    Levelselector.SetActive(false);
                     break;
                 case ButtonType.sound1:
                     bc.PlaySound(0);
@@ -90,6 +94,18 @@ public class ShootableUi : MonoBehaviour
                     break;
                 case ButtonType.Mute:
                     bc.PlaySound(3);
+                    break;
+                case ButtonType.Levelinc:
+                    if(FindObjectOfType<BaloonController>().Level<5)
+                    {
+                        FindObjectOfType<BaloonController>().Level += 1;
+                    }
+                    break;
+                case ButtonType.Leveldec:
+                    if (FindObjectOfType<BaloonController>().Level > 1)
+                    {
+                        FindObjectOfType<BaloonController>().Level -= 1;
+                    }
                     break;
 
             }

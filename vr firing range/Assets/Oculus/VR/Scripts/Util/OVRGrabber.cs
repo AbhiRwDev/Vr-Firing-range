@@ -81,10 +81,16 @@ public class OVRGrabber : MonoBehaviour
     protected Quaternion m_grabbedObjectRotOff;
     protected Dictionary<OVRGrabbable, int> m_grabCandidates = new Dictionary<OVRGrabbable, int>();
     protected bool m_operatingWithoutOVRCameraRig = true;
+    public OVRInput.Controller contr;
 
     public OVRInput.Controller GetController()
     {
+       
         return m_controller;
+    }
+    public OVRInput.Controller Getdirection()
+    {
+        return contr;
     }
     /// <summary>
     /// The currently grabbed object.

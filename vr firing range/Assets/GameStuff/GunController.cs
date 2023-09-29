@@ -21,7 +21,7 @@ public class GunController : MonoBehaviour
     private bool isShooting = false;
     private float nextShotTime = 0f;
     public bool isAutomatic = false;
-
+    public SkinnedMeshRenderer lhand, rhand;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,9 +36,12 @@ public class GunController : MonoBehaviour
         {
             if (grabbable.isGrabbed)
             {
+                
+
                 if (OVRInput.GetDown(shootButton, grabbable.grabbedBy.GetController()))
                 {
                     isShooting = true;
+                    
                 }
                 else if (OVRInput.GetUp(shootButton, grabbable.grabbedBy.GetController()))
                 {
@@ -55,10 +58,34 @@ public class GunController : MonoBehaviour
         }
         else
         {
-            if (grabbable.isGrabbed && OVRInput.GetDown(shootButton, grabbable.grabbedBy.GetController()))
+            if (grabbable.isGrabbed)
             {
-                ShootGun();
-                audioS.Play();
+                if (grabbable.grabbedBy.contr == OVRInput.Controller.LTouch)
+                {
+                    Debug.Log("left hand");
+                    lhand.enabled = false;
+
+                }
+                else
+                {
+                    lhand.enabled = true;
+                }
+                if (grabbable.grabbedBy.contr == OVRInput.Controller.RTouch)
+                {
+                    Debug.Log("right hand");
+                    rhand.enabled = false;
+                }
+                else
+                {
+                    rhand.enabled = true;
+                }
+                if (OVRInput.GetDown(shootButton, grabbable.grabbedBy.GetController()))
+                {
+                    ShootGun();
+                    audioS.Play();
+                }
+                
+                
             }
         }
 
