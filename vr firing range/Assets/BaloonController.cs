@@ -22,6 +22,7 @@ public class BaloonController : MonoBehaviour
     public Material Unmat, yesMat;
     public TextMeshPro levelround;
     public GameObject LevelSelector;
+    public float timebetweenshots;
     // Start is called before the first frame update
     void Start()
     {
@@ -57,6 +58,7 @@ public class BaloonController : MonoBehaviour
     {
         
         GenerateCombination();
+        
     }
     public void GenerateCombination()
     {
@@ -113,7 +115,7 @@ public class BaloonController : MonoBehaviour
                 Combination = Random.Range(100000, 1000000);
                 break;
         }
-        
+        timebetweenshots = Time.time;
 
        
         RandomizeBaloons();
@@ -158,6 +160,10 @@ public class BaloonController : MonoBehaviour
                
                 Debug.Log("CorrectHit");
                 Us.CHs[Level - 1] += 1;
+                Us.ARTs[Level - 1] += (Time.time-timebetweenshots);
+                Debug.Log("time taken for this-"+(Time.time-timebetweenshots));
+                timebetweenshots = Time.time;
+                Debug.Log("total time" + (Time.time));
                 CombinationEntered = s;
             }
             else

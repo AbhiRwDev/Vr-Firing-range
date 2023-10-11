@@ -6,8 +6,9 @@ public class UtilityScript : MonoBehaviour
 {
     public string Alltexts;
     public int[] WHs, CHs = new int[5];
+    public float[] ARTs = new float[5];
 
-    public TextMeshPro[] WHstexts, CHstexts = new TextMeshPro[5];
+    public TextMeshPro[] WHstexts, CHstexts, ARTtexts = new TextMeshPro[5];
     private void Update()
     {
         UpdateTexts();
@@ -18,6 +19,7 @@ public class UtilityScript : MonoBehaviour
         {
             WHstexts[i].text = WHs[i].ToString();
             CHstexts[i].text = CHs[i].ToString();
+            ARTtexts[i].text = (ARTs[i]/CHs[i]).ToString();
         }
     }
     public void ResetScores()
@@ -26,6 +28,7 @@ public class UtilityScript : MonoBehaviour
         {
             WHs[i] = 0;
             CHs[i] = 0;
+            ARTs[i] = 0;
         }
     }
 
